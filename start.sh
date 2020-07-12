@@ -16,6 +16,8 @@ docker run -d \
     -e WHITELIST=jak0bii \
     -e VIEW_DISTANCE=8 \
     -e ICON=https://raw.githubusercontent.com/borkcraft/bork-scripts/master/icon.png \
+    -e 'MOTD=My Server' \
+    -e MODS=https://github.com/borkcraft/bork-mods/raw/master/MixinBootstrap-1.0.3.jar,https://github.com/borkcraft/bork-mods/raw/master/fabric-api-0.14.1%2Bbuild.372-1.16.jar,https://github.com/borkcraft/bork-mods/raw/master/lithium-fabric-mc1.16.1-0.5.1.jar
     -v /opt/borkcraft:/data \
     -p 25565:25565 \
     --restart unless-stopped \
