@@ -10,13 +10,18 @@ timestamp() {
 }
 
 #notify player of possible performance degradation
-docker exec mc rcon-cli msg backing up the world
+docker exec borkcraft rcon-cli say  "Hello, the world backup is starting. you may experience some lag, sorry :). We will let you know when its finished!"
 
 # stop minecraft from writing to disk
-docker exec mc rcon-cli save-off
+docker exec borkcraft rcon-cli save-off
 
 # tar ball the world directory
-tar -cvf (BackupDirectory + "/" + timestamp + ".tar") WorldDirectory
+BackupFile=$BackupDirectory"/$(timestamp).tar"
+tar -cvf $BackupFile $WorldDirectory
 
 # start saving to disk again
-docker exec mc rcon-cli save-on
+docker exec borkcraft rcon-cli save-on
+
+
+#notify player of possible performance degradation
+docker exec borkcraft rcon-cli say backup completed. happy crafting!
