@@ -15,6 +15,7 @@ docker run -d \
     -e USE_AIKAR_FLAGS=true \
     -e WHITELIST=jak0bii \
     -e VIEW_DISTANCE=8 \
+    -e ICON=https://raw.githubusercontent.com/borkcraft/bork-scripts/master/icon.png \
     -v /opt/borkcraft:/data \
     -p 25565:25565 \
     --restart unless-stopped \
