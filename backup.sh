@@ -10,7 +10,7 @@ timestamp() {
 }
 
 #notify player of possible performance degradation
-docker exec borkcraft rcon-cli say  "Hello, the world backup is starting. you may experience some lag, sorry :). We will let you know when its finished!"
+docker exec borkcraft rcon-cli say  "backing things up. you may experience some momentary lag, sorry."
 
 # stop minecraft from writing to disk
 docker exec borkcraft rcon-cli save-off
@@ -24,4 +24,4 @@ docker exec borkcraft rcon-cli save-on
 
 
 #notify player of possible performance degradation
-docker exec borkcraft rcon-cli say backup completed. happy crafting!
+docker exec borkcraft rcon-cli say "backup completed. happy crafting!"
