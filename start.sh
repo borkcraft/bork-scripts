@@ -5,6 +5,7 @@ rcon_password=uuid
 # 25565 is minecrafts default port 
 # /opt/borkcraft is the directory on disk
 docker run -d \
+    -e VERSION=1.16.1 \
     -e EULA=TRUE \
     -e INIT_MEMORY=1G \
     -e MAX_MEMORY=3G \
